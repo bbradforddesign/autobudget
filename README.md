@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
@@ -66,3 +67,7 @@ This section has moved here: https://facebook.github.io/create-react-app/docs/de
 ### `npm run build` fails to minify
 
 This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+=======
+# autobudget
+Single-page react app to make creating a basic budget quick and easy. Bootstrapped with create-react-app, and contains no dependencies other than those bundled with create-react-app. 
+>>>>>>> 983aa4849a9ec0c3a34012c9b27da3bf6c36126d
