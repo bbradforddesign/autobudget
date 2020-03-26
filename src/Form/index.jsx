@@ -7,7 +7,7 @@ const Form = () => {
   const Thirty = (income / 3).toFixed(2);
 
   const CleanInput = input => {
-    const Cleaned = input.replace(/[^0-9^.]/g, "");
+    const Cleaned = input.replace(/[^0-9.]/g, "");
     const Rounded = parseFloat(Cleaned).toFixed(2);
     return Rounded;
   };
