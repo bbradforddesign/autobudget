@@ -4,7 +4,14 @@ import Header from "./Header";
 
 function App() {
   return (
-    <div className="App">
+    <div
+      className="App"
+      style={{
+        margin: "0 auto",
+        width: "50vw",
+        textAlign: "center"
+      }}
+    >
       <Header />
       <Form />
     </div>
