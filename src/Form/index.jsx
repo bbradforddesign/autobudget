@@ -1,9 +1,16 @@
 import React, { useState } from "react";
+import Results from "../Results";
 
 const Form = () => {
   //hook to set initial state
   const [income, setIncome] = useState(0);
-  const OneThird = (income / 3).toFixed(2);
+  const Thirty = (income / 3).toFixed(2);
+
+  const CleanInput = input => {
+    const Cleaned = input.replace(/\$|,/g, "");
+    const Rounded = parseFloat(Cleaned).toFixed(2);
+    return Rounded;
+  };
 
   return (
     <div style={{}}>
@@ -12,8 +19,7 @@ const Form = () => {
           <h2>Net Income</h2>
           <input
             name="income"
-            value={income}
-            onChange={e => setIncome(e.target.value)}
+            onChange={e => setIncome(CleanInput(e.target.value))}
             placeholder="Enter Net Income"
             style={{
               marginBottom: "3vh"
@@ -21,26 +27,7 @@ const Form = () => {
           />
         </label>
       </form>
-      {income > 0 && (
-        <div
-          style={{
-            textAlign: "left"
-          }}
-        >
-          <ul
-            style={{
-              listStyle: "none"
-            }}
-          >
-            <li>
-              <h3>Total: ${income}</h3>
-            </li>
-            <li>Housing: ${OneThird}</li>
-            <li>Essentials: ${OneThird}</li>
-            <li>Other: ${(income - OneThird * 2).toFixed(2)}</li>
-          </ul>
-        </div>
-      )}
+      {income > 0 && <Results income={income} Thirty={Thirty} />}
     </div>
   );
 };
