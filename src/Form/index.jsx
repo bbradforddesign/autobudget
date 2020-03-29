@@ -5,7 +5,7 @@ const Form = () => {
   //hook to set initial state
   const [income, setIncome] = useState(0);
   const Thirty = (income / 3).toFixed(2);
-
+  //clean input to pass to Results component
   const CleanInput = input => {
     let Cleaned = input.replace(/[^0-9.]/g, "");
     let Rounded = parseFloat(Cleaned).toFixed(2);
